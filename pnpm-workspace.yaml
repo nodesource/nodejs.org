@@ -9,6 +9,7 @@ allowBuilds:
   sharp: true
   unrs-resolver: true
   workerd: true
+  '@nodejs/doc-kit': true
 
 catalog:
   '@types/node': ^24.10.1

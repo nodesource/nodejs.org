@@ -55,7 +55,8 @@
           "releases": "Node.js Releases",
           "security": "Security Reporting",
           "partners": "Partners & Supporters",
-          "eol": "End-of-Life (EOL)"
+          "eol": "End-of-Life (EOL)",
+          "upgradeAdvisor": "Upgrading Node.js"
         }
       },
       "getInvolved": {
