@@ -10,41 +10,36 @@ Keeping your Node.js applications up-to-date is crucial for security, performanc
 
 Node.js itself is and always will be free, open source software. The guidance below is designed to help you plan and execute upgrades, whether you do it yourself or work with one of the service providers in our ecosystem.
 
-## Why Upgrade?
+## Open Source Migration Resources
+
+### Why Upgrade?
 
 - **Security**: Insight into vulnerabilities affecting your specific codebase.
 - **Performance**: Leverage the latest V8 engine improvements and Node.js optimizations.
 - **Support**: Ensure your applications are on supported release lines (LTS).
 
-## How to Upgrade
+### How to Upgrade
 
-Upgrading a Node.js application typically involves the following steps:
-
-1. **Assessment of Node.js versions, dependencies, and risk**: Identify outdated or supported versions and potential security risks in your environment.
-2. **Review Changelogs & Plan**: Look for breaking changes and create a phased upgrade plan for supported LTS releases.
+1. **Assessment**: Identify outdated versions, dependencies, and potential risks.
+2. **Review & Plan**: Check changelogs for breaking changes and create a phased upgrade plan.
 3. **Update Dependencies**: Ensure your third-party packages are compatible with the new Node.js version.
-4. **Hands-on execution**: Refactor code to address deprecations and breaking changes.
-5. **Run Tests**: Execute your test suite to identify any immediate regressions.
-6. **Deploy**: Roll out the upgrade to your staging and production environments.
+4. **Execute**: Refactor code to address deprecations and breaking changes.
+5. **Test**: Run your test suite to catch regressions.
+6. **Deploy**: Roll out the upgrade to staging and production.
 
-Take the first step and download the latest Node.js version.
+Upgrades can introduce risks — breaking changes, dependency incompatibilities, and subtle runtime differences that are hard to debug. To help with Step 4, the [Node.js Userland Migrations Working Group](https://github.com/nodejs/userland-migrations) provides **codemods**, automated code transformations that handle specific breaking changes across your codebase:
+
+```bash
+npx codemod @nodejs/<recipe>
+```
+
+These community-maintained recipes are published in the [Codemod Registry](https://registry.codemod.com), letting you incrementally adopt fixes without a full rewrite. Contributions are welcome — author new recipes, review existing ones, or help shape the ecosystem's migration strategy.
 
 <div className="my-8 flex w-full justify-center">
   <Button kind="primary" href="/download">
     <span>Download the latest LTS Node.js®</span>
   </Button>
 </div>
-
-## Risks Determining the Upgrade Complexity
-
-<AlertBox level="warning">
-  While necessary, upgrades can introduce risks that need to be managed
-  carefully.
-</AlertBox>
-
-- **Breaking Changes**: APIs may have changed or been removed, causing runtime errors.
-- **Dependency Incompatibility**: Critical libraries might not yet support the new Node.js version.
-- **Silent Failures**: Subtle behavior changes in the runtime can lead to difficult-to-debug issues.
 
 ## Ecosystem Support Programs
 
