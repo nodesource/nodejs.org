@@ -141,6 +141,10 @@
         "eol": {
           "link": "/about/eol",
           "label": "components.navigation.about.links.eol"
+        },
+        "upgradeAdvisor": {
+          "link": "/about/upgrading-nodejs",
+          "label": "components.navigation.about.links.upgradeAdvisor"
         }
       }
     },

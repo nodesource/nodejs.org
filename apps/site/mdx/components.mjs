@@ -3,6 +3,7 @@
 import AlertBox from '@node-core/ui-components/Common/AlertBox';
 import BadgeGroup from '@node-core/ui-components/Common/BadgeGroup';
 import Blockquote from '@node-core/ui-components/Common/Blockquote';
+import NodeSourceLogo from '@node-core/ui-components/Icons/PartnerLogos/NodeSource/Logo';
 import MDXCodeTabs from '@node-core/ui-components/MDX/CodeTabs';
 import {
   MDXTooltip,
@@ -102,4 +103,5 @@ export default {
   Button,
   Link,
   LinkWithArrow,
+  NodeSourceLogo,
 };

@@ -1,0 +1,72 @@
+---
+title: Upgrading Node.js
+layout: about
+description: Get a free assessment to upgrade your Node.js applications with confidence.
+---
+
+# Upgrading Node.js
+
+Keeping your Node.js applications up-to-date is crucial for security, performance, and accessing the latest features. However, migrating from legacy versions can be challenging due to breaking changes, deprecated APIs, and dependency conflicts.
+
+Node.js itself is and always will be free, open source software. The guidance below is designed to help you plan and execute upgrades, whether you do it yourself or work with one of the service providers in our ecosystem.
+
+## Open Source Migration Resources
+
+### Why Upgrade?
+
+- **Security**: Insight into vulnerabilities affecting your specific codebase.
+- **Performance**: Leverage the latest V8 engine improvements and Node.js optimizations.
+- **Support**: Ensure your applications are on supported release lines (LTS).
+
+### How to Upgrade
+
+1. **Assessment**: Identify outdated versions, dependencies, and potential risks.
+2. **Review & Plan**: Check changelogs for breaking changes and create a phased upgrade plan.
+3. **Update Dependencies**: Ensure your third-party packages are compatible with the new Node.js version.
+4. **Execute**: Refactor code to address deprecations and breaking changes.
+5. **Test**: Run your test suite to catch regressions.
+6. **Deploy**: Roll out the upgrade to staging and production.
+
+Upgrades can introduce risks — breaking changes, dependency incompatibilities, and subtle runtime differences that are hard to debug. To help with Step 4, the [Node.js Userland Migrations Working Group](https://github.com/nodejs/userland-migrations) provides **codemods**, automated code transformations that handle specific breaking changes across your codebase:
+
+```bash
+npx codemod @nodejs/<recipe>
+```
+
+These community-maintained recipes are published in the [Codemod Registry](https://registry.codemod.com), letting you incrementally adopt fixes without a full rewrite. Contributions are welcome — author new recipes, review existing ones, or help shape the ecosystem's migration strategy.
+
+<div className="my-8 flex w-full justify-center">
+  <Button kind="primary" href="/download">
+    <span>Download the latest LTS Node.js®</span>
+  </Button>
+</div>
+
+## Ecosystem Support Programs
+
+The OpenJS Foundation has established an LTS Upgrade & Modernization framework to help organizations move safely off legacy and end-of-life (EOL) Node.js versions. As the nonprofit steward of Node.js, the Foundation defines the program standards, ensures alignment with the upstream project, and works with qualified service providers who deliver tools and technical support under this framework.
+
+The following service providers participate in the OpenJS Foundation's LTS Upgrade & Modernization program:
+
+### NodeSource
+
+<div className="my-8 flex w-full justify-center">
+  <NodeSourceLogo className="h-12 w-auto dark:text-white" />
+</div>
+
+[NodeSource](https://nodesource.com/products/nodejs-upgrade) provides upgrade assessment tools and expert-guided modernization services under the Foundation's framework. Their program offers a structured path to modernization:
+
+- **Scan Your App (Free)**: NodeSource's public "Upgrade Discovery CLI" tool scans your project's environment for dependencies, C++ addons, and static API usage.
+- **AI-Powered Analysis (Free)**: Receive deep insights including executive scores for security and upgrade risk, identification of critical blockers, and a complete scan for deprecated APIs and vulnerabilities.
+- **Custom Modernization Plan**: Access a tailored roadmap, specialized tools, and technical support from NodeSource experts to ensure a safe and efficient migration.
+
+<div className="my-8 flex w-full justify-center">
+  <Button
+    kind="primary"
+    href="https://nodesource.com/products/nodejs-upgrade"
+    target="_blank"
+  >
+    <span>Learn more about NodeSource's upgrade services</span>
+  </Button>
+</div>
+
+The OpenJS Foundation's Ecosystem Support Programs connect the Node.js community with qualified service providers. If your organization is interested in becoming a program participant, [contact the Foundation](https://openjsf.org/).
